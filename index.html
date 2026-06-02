@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>NovaCart - Premium Store</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      #login-form {
+        display: none;
+      }
+
+      #login-form:target {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- Announcement Bar -->
+    <div class="bg-gradient-to-r from-purple-800 via-violet-700 to-fuchsia-700">
+      <div class="max-w-7xl mx-auto px-3 sm:px-4 py-2 sm:py-3">
+        <p
+          class="text-center text-white text-xs sm:text-sm md:text-base font-medium tracking-wide leading-relaxed"
+        >
+          🔥 FLASH SALE:
+          <span class="text-cyan-300 font-bold">50% OFF</span>
+          on Selected Products
+          <span class="hidden sm:inline">
+            | Free Shipping on Orders Over ₹999
+          </span>
+        </p>
+      </div>
+    </div>
+    <nav class="sticky top-0 z-50 bg-white shadow-md">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <h1 class="text-3xl font-bold">
+              <span class="text-violet-700">Nova</span>
+              <span class="text-fuchsia-600">Cart</span>
+            </h1>
+          </div>
+
+          <!-- Menu -->
+          <ul
+            class="hidden lg:flex items-center gap-8 font-medium text-gray-700"
+          >
+            <li>
+              <a
+                href="#"
+                class="text-violet-700 hover:text-fuchsia-600 transition"
+              >
+                Home
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="hover:text-fuchsia-600 transition"> Shop </a>
+            </li>
+
+            <li>
+              <a href="#" class="hover:text-fuchsia-600 transition">
+                Categories
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="hover:text-fuchsia-600 transition">
+                New Arrivals
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="hover:text-fuchsia-600 transition"> Deals </a>
+            </li>
+
+            <li>
+              <a href="#" class="hover:text-fuchsia-600 transition">
+                Contact
+              </a>
+            </li>
+          </ul>
+
+          <!-- Search -->
+          <!-- Search -->
+          <div class="hidden lg:flex items-center">
+            <div class="relative">
+              <input
+                type="text"
+                placeholder="Search products..."
+                class="w-72 border border-gray-300 rounded-full py-3 pl-5 pr-12 outline-none focus:border-violet-600 focus:ring-2 focus:ring-violet-200 transition"
+              />
+
+              <button
+                class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-violet-700 transition"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Side -->
+          <div class="flex items-center gap-5">
+            <!-- Wishlist -->
+            <button class="relative group">
+              <i
+                class="fa-regular fa-heart text-2xl text-gray-700 group-hover:text-violet-700 transition"
+              ></i>
+
+              <span
+                class="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center"
+              >
+                2
+              </span>
+            </button>
+
+            <!-- Cart -->
+            <button class="relative group">
+              <i
+                class="fa-solid fa-cart-shopping text-2xl text-gray-700 group-hover:text-violet-700 transition"
+              ></i>
+
+              <span
+                class="absolute -top-2 -right-2 bg-violet-700 text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center"
+              >
+                5
+              </span>
+            </button>
+
+            <!-- User Account -->
+            <button
+              class="hidden md:flex items-center justify-center w-10 h-10 rounded-full border border-gray-300 hover:border-violet-600 hover:text-violet-700 transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 6.75a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.5 20.118a7.5 7.5 0 0 1 15 0"
+                />
+              </svg>
+            </button>
+
+            <!-- Login Button -->
+            <a
+              href="#login-form"
+              class="hidden md:flex bg-violet-700 text-white px-5 py-2 rounded-full hover:bg-violet-800 transition"
+            >
+              Login
+            </a>
+
+            <!-- Mobile Menu -->
+            <button class="lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="w-8 h-8"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5m-16.5 5.25h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section
+      id="login-form"
+      class="min-h-screen flex items-center justify-center from-violet-900 via-purple-800 to-fuchsia-700 p-4"
+    >
+      <div
+        class="w-full max-w-md backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl p-8 shadow-2xl bg-gradient-to-br"
+      >
+        <a
+          href="#"
+          class="absolute top-5 right-5 text-white text-3xl hover:text-fuchsia-300"
+        >
+          &times;
+        </a>
+        <!-- Logo -->
+        <div class="text-center mb-8">
+          <h1 class="text-4xl font-extrabold">
+            <span class="text-white">Nova</span>
+            <span class="text-fuchsia-300">Cart</span>
+          </h1>
+          <p class="text-gray-200 mt-2">
+            Welcome back! Sign in to your account
+          </p>
+        </div>
+
+        <!-- Form -->
+        <form class="space-y-5">
+          <!-- Email -->
+          <div>
+            <label class="block text-white text-sm mb-2">Email Address</label>
+
+            <div class="relative">
+              <i
+                class="fa-regular fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-gray-300"
+              ></i>
+
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="w-full bg-white/10 border border-white/20 rounded-xl py-3 pl-12 pr-4 text-white placeholder-gray-300 outline-none focus:border-fuchsia-400"
+              />
+            </div>
+          </div>
+
+          <!-- Password -->
+          <div>
+            <label class="block text-white text-sm mb-2">Password</label>
+
+            <div class="relative">
+              <i
+                class="fa-solid fa-lock absolute left-4 top-1/2 -translate-y-1/2 text-gray-300"
+              ></i>
+
+              <input
+                type="password"
+                placeholder="Enter your password"
+                class="w-full bg-white/10 border border-white/20 rounded-xl py-3 pl-12 pr-4 text-white placeholder-gray-300 outline-none focus:border-fuchsia-400"
+              />
+            </div>
+          </div>
+
+          <!-- Options -->
+          <div class="flex items-center justify-between text-sm">
+            <label class="flex items-center gap-2 text-gray-200">
+              <input type="checkbox" />
+              Remember Me
+            </label>
+
+            <a href="#" class="text-fuchsia-300 hover:text-white">
+              Forgot Password?
+            </a>
+          </div>
+
+          <!-- Login Button -->
+          <button
+            type="submit"
+            class="w-full bg-white text-violet-800 font-bold py-3 rounded-xl hover:bg-fuchsia-300 transition duration-300"
+          >
+            Sign In
+          </button>
+
+          <!-- Divider -->
+          <div class="flex items-center gap-3">
+            <div class="h-px flex-1 bg-white/20"></div>
+            <span class="text-gray-300 text-sm">OR</span>
+            <div class="h-px flex-1 bg-white/20"></div>
+          </div>
+
+          <!-- Social Login -->
+          <div class="grid grid-cols-2 gap-4">
+            <button
+              type="button"
+              class="bg-white/10 border border-white/20 py-3 rounded-xl text-white hover:bg-white/20 transition"
+            >
+              <i class="fa-brands fa-google mr-2"></i>
+              Google
+            </button>
+
+            <button
+              type="button"
+              class="bg-white/10 border border-white/20 py-3 rounded-xl text-white hover:bg-white/20 transition"
+            >
+              <i class="fa-brands fa-facebook-f mr-2"></i>
+              Facebook
+            </button>
+          </div>
+
+          <!-- Register -->
+          <p class="text-center text-gray-200 text-sm">
+            Don't have an account?
+            <a href="#" class="text-fuchsia-300 font-semibold hover:text-white">
+              Create Account
+            </a>
+          </p>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
